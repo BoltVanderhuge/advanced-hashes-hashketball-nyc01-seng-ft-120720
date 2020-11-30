@@ -163,6 +163,7 @@ def team_names
    team_array.push(stats[:team_name])
   end
   team_array
+  binding.pry
 end
 
 # def player_numbers(team_name)
