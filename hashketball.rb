@@ -201,11 +201,10 @@ def big_shoe_rebounds
   game_hash.each do |hora, stats|
     stats[:players].each do |player|
       if player[:player_name] == big_shoe_player
-       return player[:rebounds]
+       return player[:rebounds] binding.pry
       end
     end
   end
-  binding.pry
 end
 
 
