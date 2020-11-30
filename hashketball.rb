@@ -186,19 +186,25 @@ def player_stats(player_name)
     end
   end
 end
-def most_points_scored
- most_points = 0
- big_shooter_player = ""
- game_hash.each do |hora, stats|
+
+def big_shoe_rebounds
+  big_shoe_size = 0
+  big_shoe_player = ""
+  game_hash.each do |hora, stats|
     stats[:players].each do |player|
-      if player[:points] > most_points
-       most_points= player[:points]
-       big_shooter_player = player[:player_name]
+      if player[:shoe] > big_shoe_size
+       big_shoe_size = player[:shoe]
+       big_shoe_player = player[:player_name]
       end
     end
   end
- 
-  binding.pry
+  game_hash.each do |hora, stats|
+    stats[:players].each do |player|
+      if player[:player_name] == big_shoe_player
+       return player[:rebounds]
+      end
+    end
+  end
 end
 
 
