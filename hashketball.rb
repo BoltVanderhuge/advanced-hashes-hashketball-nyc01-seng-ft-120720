@@ -187,24 +187,24 @@ def player_stats(player_name)
   end
 end
 
-def big_shoe_rebounds
-  big_shoe_size = 0
-  big_shoe_player = ""
-  game_hash.each do |hora, stats|
-    stats[:players].each do |player|
-      if player[:shoe] > big_shoe_size
-       big_shoe_size = player[:shoe]
-       big_shoe_player = player[:player_name]
-      end
-    end
-  end
-  game_hash.each do |hora, stats|
-    stats[:players].each do |player|
-      if player[:player_name] == big_shoe_player
-       return player[:rebounds]
-      end
-    end
-  end
-end
+# def big_shoe_rebounds
+#   big_shoe_size = 0
+#   big_shoe_player = ""
+#   game_hash.each do |hora, stats|
+#     stats[:players].each do |player|
+#       if player[:shoe] > big_shoe_size
+#       big_shoe_size = player[:shoe]
+#       big_shoe_player = player[:player_name]
+#       end
+#     end
+#   end
+#   game_hash.each do |hora, stats|
+#     stats[:players].each do |player|
+#       if player[:player_name] == big_shoe_player
+#       return player[:rebounds]
+#       end
+#     end
+#   end
+# end
 
 
