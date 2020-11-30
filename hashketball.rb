@@ -163,30 +163,29 @@ def team_names
    team_array.push(stats[:team_name])
   end
   team_array
-  binding.pry
 end
 
-# def player_numbers(team_name)
-#   jersey_number_array = []
-#   game_hash.each do |hora,stats|
-#     if stats[:team_name] == team_name
-#       stats[:players].each do |player|
-#         jersey_number_array.push(player[:number])
-#       end  
-#     end
-#   end
-#   return jersey_number_array
-# end
+def player_numbers(team_name)
+  jersey_number_array = []
+  game_hash.each do |hora,stats|
+    if stats[:team_name] == team_name
+      stats[:players].each do |player|
+        jersey_number_array.push(player[:number])
+      end  
+    end
+  end
+  return jersey_number_array
+end
 
-# def player_stats(player_name)
-#   game_hash.each do |hora, stats|
-#     stats[:players].each do |player|
-#       if player[:player_name] == player_name
-#       return player
-#       end
-#     end
-#   end
-# end
+def player_stats(player_name)
+  game_hash.each do |hora, stats|
+    stats[:players].each do |player|
+      if player[:player_name] == player_name
+       return player
+      end
+    end
+  end
+end
 
 
 
