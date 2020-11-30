@@ -198,7 +198,6 @@ def big_shoe_rebounds
       end
     end
   end
-  #binding.pry
   game_hash.each do |hora, stats|
     stats[:players].each do |player|
       if player[:player_name] == big_shoe_player
@@ -206,6 +205,7 @@ def big_shoe_rebounds
       end
     end
   end
+  binding.pry
 end
 
 def most_points_scored
@@ -219,6 +219,4 @@ def most_points_scored
       end
     end
   end
- binding.pry
-  
-end
+ end
